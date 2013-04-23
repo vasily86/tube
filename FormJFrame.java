@@ -43,7 +43,7 @@ public class FormJFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jButton1.setText("Обновить");
+        jButton1.setText("РћР±РЅРѕРІРёС‚СЊ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

@@ -28,11 +28,12 @@ public class Probirki {
         pool = new FBWrappingDataSource();        
 
         //pool.setDatabase("localhost/3050:D:/DB.FDB");
-        //pool.setDatabase("192.168.2.2/3050:E:/NMTWIN1251.GDB");
-        pool.setDatabase("192.168.0.1/3050:D:/DB.FDB");
+        pool.setDatabase("192.168.2.2/3050:E:/NMTWIN1251.GDB");
+        //pool.setDatabase("192.168.0.1/3050:D:/DB.FDB");
         //pool.setDatabase("localhost/3050:C:/test_base/MOSK.FDB");
         pool.setUserName("SYSDBA");
-        pool.setPassword("masterkey");                   
+        pool.setPassword("masterkey");    
+        pool.setCharSet("CP1251");
     }
     
     

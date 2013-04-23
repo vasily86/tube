@@ -9,14 +9,14 @@ package checktubes;
      
     class MyRenderer extends JLabel implements ListCellRenderer
     {
-        public MyRenderer() {   // Конструктор
-             setOpaque(true);   // не знаю, зачем это надо, взял из примера :)
+        public MyRenderer() {   // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+             setOpaque(true);   // РЅРµ Р·РЅР°СЋ, Р·Р°С‡РµРј СЌС‚Рѕ РЅР°РґРѕ, РІР·СЏР» РёР· РїСЂРёРјРµСЂР° :)
         }
         
         public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus)
         {
             
-            if (isSelected) // если элемент выделен - выставляем ему одни цвета, если нет - другие
+            if (isSelected) // РµСЃР»Рё СЌР»РµРјРµРЅС‚ РІС‹РґРµР»РµРЅ - РІС‹СЃС‚Р°РІР»СЏРµРј РµРјСѓ РѕРґРЅРё С†РІРµС‚Р°, РµСЃР»Рё РЅРµС‚ - РґСЂСѓРіРёРµ
             {
                 setBackground(list.getSelectionBackground());
                 //setForeground(list.getSelectionForeground());
@@ -41,7 +41,7 @@ package checktubes;
             //getFont().;
             Font displayFont = new Font("Tahoma", Font.PLAIN, 14);
             setFont(displayFont);
-            setText(((InfoProbirka)value).examid + "  " + ((InfoProbirka)value).name );   // ТУТ МЫ ЗАДАЕМ ТЕКСТ ЭЛЕМЕНТА!!
+            setText(((InfoProbirka)value).examid + "  " + ((InfoProbirka)value).name );   // РўРЈРў РњР« Р—РђР”РђР•Рњ РўР•РљРЎРў Р­Р›Р•РњР•РќРўРђ!!
      
             return this;
         }

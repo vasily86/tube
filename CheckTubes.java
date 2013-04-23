@@ -29,10 +29,10 @@ public class CheckTubes {
         // TODO code application logic here
         
         form = new FormJFrame();
-        form.setTitle("Проверка прощёлкнутых пробирок");
+        form.setTitle("РџСЂРѕРІРµСЂРєР° РїСЂРѕС‰С‘Р»РєРЅСѓС‚С‹С… РїСЂРѕР±РёСЂРѕРє");
         
-        form.jLabel1.setText("Было отправлено: ");
-        form.jLabel2.setText("Пробито по базе: ");
+        form.jLabel1.setText("Р‘С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ: ");
+        form.jLabel2.setText("РџСЂРѕР±РёС‚Рѕ РїРѕ Р±Р°Р·Рµ: ");
         
         
         ListCellRenderer renderer = new MyRenderer();
@@ -44,7 +44,7 @@ public class CheckTubes {
         
         form.jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //пишем в базу
+                //РїРёС€РµРј РІ Р±Р°Р·Сѓ
                 form.jProgressBar1.setVisible(true);
                 new Thread(new Runnable() {
                     public void run() {
@@ -60,15 +60,15 @@ public class CheckTubes {
         
         form.jList1.addMouseListener( new java.awt.event.MouseAdapter() {            
             public void mousePressed(MouseEvent event) {
-                form.jLabel1.setText("Было отправлено: " );
-                form.jLabel2.setText("Пробито по базе: ");
+                form.jLabel1.setText("Р‘С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ: " );
+                form.jLabel2.setText("РџСЂРѕР±РёС‚Рѕ РїРѕ Р±Р°Р·Рµ: ");
                 //if (event.getClickCount() == 1) {
                     try {
                         InfoProbirka pr = (InfoProbirka) listModel.get( form.jList1.getSelectedIndex() );
-                        form.jLabel1.setText("Было отправлено: " + pr.count);
+                        form.jLabel1.setText("Р‘С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ: " + pr.count);
                         Probirki  prob = new Probirki();
                         prob.init();
-                        form.jLabel2.setText("Пробито по базе: " + prob.countProbirka(pr));
+                        form.jLabel2.setText("РџСЂРѕР±РёС‚Рѕ РїРѕ Р±Р°Р·Рµ: " + prob.countProbirka(pr));
                     } catch (Exception e ) {
                         System.out.println(e.getMessage());
                     }
